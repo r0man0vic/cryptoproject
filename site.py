@@ -14,4 +14,4 @@ else:
     st.warning("No data available")
 
 
-#st.write("Version")
+#st.write("1.0")
