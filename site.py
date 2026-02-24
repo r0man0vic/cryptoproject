@@ -1,4 +1,5 @@
 import streamlit as st
+import plotly.graph_objects as go
 import yfinance as yf
 st.set_page_config(page_title="Crypto",layout="wide")
 st.title("Crypto Drop/Growth")
@@ -12,13 +13,16 @@ eventlist=events[mode]
 if eventlist:
     eventtitle=[e["title"] for e in eventlist]
     exactevent=st.selectbox("Select event",eventtitle)
-    event_data=next(e for e in eventlist if e["title"]==exactevent)
+    eventdata=next(e for e in eventlist if e["title"]==exactevent)
 else:
-    event_data=None
+    eventdata=None
 if not data.empty:
-    st.line_chart(data["Close"])
+    fig=go.Figure()
+    fig.add_trace(go.Scatter(x=data.index,y=data["Close"],mode="lines",name=coin))
+    fig.update_layout(height=500)
+    st.plotly_chart(fig,use_container_width=True)
 else:
-    st.warning("No data available")
+    st.warning("No data")
 
 
 #st.write("1.0")
