@@ -6,8 +6,9 @@ st.title("Crypto Drop/Growth")
 mode = st.radio("Choose growth or drop of crypto currency", ["Growth","Drop"], horizontal=True)
 coin = st.selectbox("Choose cryptocurrency",["BTC-USD", "ETH-USD"], index=0)
 period = st.selectbox("Choose period",["1mo", "3mo", "6mo", "1y", "2y", "5y", "max"],index=2)
-data = yf.download(coin, period=period, progress=False)
-data = data.dropna()
+data=yf.download(coin,period=period,progress=False,auto_adjust=True)
+data=data.reset_index()
+data=data.dropna()
 events={"Growth":[],"Drop":[{"date":"","title":"Ms sells btc","description":"jhebcheb"},{"date":"2022-11-09","title":"FTX Collapse","description":"ms promised not to sell etc, but they did"}]}
 eventlist=events[mode]
 if eventlist:
