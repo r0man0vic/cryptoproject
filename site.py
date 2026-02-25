@@ -1,5 +1,5 @@
 import streamlit as st
-import plotly.graph_objects as go
+#import plotly.graph_objects as go
 import yfinance as yf
 st.set_page_config(page_title="Crypto",layout="wide")
 st.title("Crypto Drop/Growth")
@@ -9,6 +9,8 @@ period = st.selectbox("Choose period",["1mo", "3mo", "6mo", "1y", "2y", "5y", "m
 data=yf.download(coin,period=period,progress=False,auto_adjust=True)
 data=data.reset_index()
 data=data.dropna()
+st.write(data.head())
+st.write(data.dtypes)
 events={"Growth":[],"Drop":[{"date":"","title":"Ms sells btc","description":"jhebcheb"},{"date":"2022-11-09","title":"FTX Collapse","description":"ms promised not to sell etc, but they did"}]}
 eventlist=events[mode]
 if eventlist:
@@ -19,11 +21,11 @@ else:
     eventdata=None
 if not data.empty:
     fig=go.Figure()
-    fig.add_trace(go.Scatter(x=data.index,y=data["Close"],mode="lines",name=coin))
-    fig.update_layout(height=500)
+    fig.add_trace(go.Scatter(x=data["Date"],y=data["Close"],mode="lines",name=coin))
+    fig.update_layout(height=500,margin=dict(l=10,r=10,t=10,b=10))
     st.plotly_chart(fig,use_container_width=True)
 else:
-    st.warning("No data")
+    st.warning("No data available")
 
 
 #st.write("1.0")
