@@ -19,6 +19,8 @@ if eventlist:
     eventtitle=[e["title"] for e in eventlist]
     exactevent=st.selectbox("Select event",eventtitle)
     event_data=next(e for e in eventlist if e["title"]==exactevent)
+else:
+    event_data=None
 #button
 jump_days=15
 
@@ -36,4 +38,4 @@ else:
     st.warning("No data available")
 
 
-#st.write("1.1")
+#st.write("1.2")
