@@ -14,7 +14,7 @@ data = data.dropna()
 #st.line_chart(btc["Close"])
 events={"Growth":[],
         "Drop":[{"date":"2022-12-01","title":"Ms sells btc","description":"promised not to sell it but sold it","window":20},
-                {"date":"2020-03-01","title":"Covid-19","withdrawals around the world":"ms promised not to sell etc, but they did","window":30}]}
+                {"date":"2020-03-01","title":"Covid-19","description":"global pandemic","window":30}]}
                             #{"date":"20-11-09","title":"FTX Collapse","withdrawals around the world":"ms promised not to sell etc, but they did"}]}
 eventlist=events[mode]
 if eventlist:
@@ -35,6 +35,10 @@ else:
     event_data=None
 if not data.empty:
     st.line_chart(data["Close"])
+if event_data:
+    st.subheader(event_data["title"])
+    st.caption(event_data["date"])
+    st.write(event_data["description"])
 else:
     st.warning("No data available")
 
