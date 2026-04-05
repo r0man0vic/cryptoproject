@@ -13,8 +13,8 @@ data = data.dropna()
 #btc = yf.download("BTC-USD", period="6mo", progress=False)
 #st.line_chart(btc["Close"])
 events={"Growth":[],"Drop":[{"date":"2022-12-01","title":"Ms sells btc","description":"promised not to sell it but sold it"},
-                            {"date":"2015-11-09","title":"FTX Collapse","withdrawals around the world":"ms promised not to sell etc, but they did"}
-                            {"date":"20-11-09","title":"FTX Collapse","withdrawals around the world":"ms promised not to sell etc, but they did"}]}
+                            {"date":"2015-11-09","title":"FTX Collapse","withdrawals around the world":"ms promised not to sell etc, but they did"}]}
+                            #{"date":"20-11-09","title":"FTX Collapse","withdrawals around the world":"ms promised not to sell etc, but they did"}]}
 eventlist=events[mode]
 if eventlist:
     eventtitle=[e["title"] for e in eventlist]
