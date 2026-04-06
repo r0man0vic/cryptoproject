@@ -15,7 +15,7 @@ data = data.dropna()
 events={"Growth":[],
         "Drop":[{"date":"2022-12-01","title":"Ms sells btc","description":"promised not to sell it but sold it","window":20},
                 {"date":"2020-03-01","title":"Covid-19","description":"global pandemic","window":30},
-                {"start":"2017-01-18","end":"2018-12-30","title":"Bear market","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":365}]}
+                {"date":"2018-01-01","title":"Bear market","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":365}]}
 #{"date":"20-11-09","title":"FTX Collapse","withdrawals around the world":"ms promised not to sell etc, but they did"}]}
 eventlist=events[mode]
 if eventlist:
@@ -26,34 +26,19 @@ if eventlist:
 jump_days=1
 
 if st.button("Jump to time") and event_data:
-    #center=pd.to_datetime(event_data["date"])
-    #window=event_data.get("window",15)
-    #start=(center-pd.Timedelta(days=window)).strftime("%Y-%m-%d")
-    #end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")
- window=event_data.get("window",15)
-
-if "date" in event_data:
     center=pd.to_datetime(event_data["date"])
+    window=event_data.get("window",15)
+    start=(center-pd.Timedelta(days=window)).strftime("%Y-%m-%d")
+    end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")
+    data=yf.download(coin,start=start,end=end,progress=False)
+    data=data.dropna()
 else:
-    start_event=pd.to_datetime(event_data["start"])
-    end_event=pd.to_datetime(event_data["end"])
-    center=start_event+(end_event-start_event)/2
-
-start=(center-pd.Timedelta(days=window)).strftime("%Y-%m-%d")
-end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")   
-data=yf.download(coin,start=start,end=end,progress=False)
-data=data.dropna()
-
-#else:
-#    event_data=None
+    event_data=None
 if not data.empty:
     st.line_chart(data["Close"])
 if event_data:
     st.subheader(event_data["title"])
-    if "date" in event_data:
-        st.caption(event_data["date"])
-    else:
-        st.caption(f"{event_data['start']} → {event_data['end']}")
+    st.caption(event_data["date"])
     st.write(event_data["description"])
 #else:
 #    st.warning("No data available")
