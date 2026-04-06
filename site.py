@@ -12,10 +12,16 @@ data = yf.download(coin, period=period, progress=False)
 data = data.dropna()
 #btc = yf.download("BTC-USD", period="6mo", progress=False)
 #st.line_chart(btc["Close"])
-events={"Growth":[],
-        "Drop":[{"date":"2022-12-01","title":"Ms sells btc","description":"promised not to sell it but sold it","window":20},
+events={"Growth":[{"date":"2020-12-10","title":"digital gold","description":"Terra collapsed","window":90}],
+        "Drop":[
                 {"date":"2020-03-20","title":"Covid-19 crypto crisis","description":"global pandemic","window":30},
-                {"date":"2018-04-16","title":"Bear market in 2017","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":120}]}
+                {"date":"2018-04-16","title":"Bear market in 2017","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":120},
+                {"date":"2021-05-15","title":"China mining ban + Elon Musk tweets ","description":"China’s mining crackdown and macro uncertainty triggered a sharp correction after a historic bull run. Elon Musk's tweets regarding energy concerns","window":14},
+                {"date":"2022-05-4","title":"Terra crash","description":"Terra collapsed","window":45},
+                {"date":"2021-12-18","title":"Federal Reserve tightening","description":"Bitcoin declined as the Federal Reserve signaled tighter monetary policy, reducing liquidity and pushing investors away from risk assets.","window":35},
+                {"date":"2025-02-15","title":"Trump's tariffs","description":"1 feb -1march 2025Trump's announcement on new tarriffs","window":17},
+                {"date":"2025-10-30","title":"Federal Reserve Uncertainty Dampens Risk Appetite","description":"4 oct 2025- 22nov 2025","window":20},
+                {"date":"2026-02-4","title":"Possible gov shutdown","description":"uncertanty","window":22}]}
 #{"date":"20-11-09","title":"FTX Collapse","withdrawals around the world":"ms promised not to sell etc, but they did"}]}
 eventlist=events[mode]
 if eventlist:
