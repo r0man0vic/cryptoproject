@@ -39,8 +39,8 @@ if event_data:
     st.subheader(event_data["title"])
     st.caption(event_data["date"])
     st.write(event_data["description"])
-else:
-    st.warning("No data available")
+#else:
+#    st.warning("No data available")
 
 
 #st.write("1.1")
