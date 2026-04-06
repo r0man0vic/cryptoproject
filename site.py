@@ -26,14 +26,26 @@ if eventlist:
 jump_days=1
 
 if st.button("Jump to time") and event_data:
+    #center=pd.to_datetime(event_data["date"])
+    #window=event_data.get("window",15)
+    #start=(center-pd.Timedelta(days=window)).strftime("%Y-%m-%d")
+    #end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")
+ window=event_data.get("window",15)
+
+if "date" in event_data:
     center=pd.to_datetime(event_data["date"])
-    window=event_data.get("window",15)
-    start=(center-pd.Timedelta(days=window)).strftime("%Y-%m-%d")
-    end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")
-    data=yf.download(coin,start=start,end=end,progress=False)
-    data=data.dropna()
 else:
-    event_data=None
+    start_event=pd.to_datetime(event_data["start"])
+    end_event=pd.to_datetime(event_data["end"])
+    center=start_event+(end_event-start_event)/2
+
+start=(center-pd.Timedelta(days=window)).strftime("%Y-%m-%d")
+end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")   
+data=yf.download(coin,start=start,end=end,progress=False)
+data=data.dropna()
+
+#else:
+#    event_data=None
 if not data.empty:
     st.line_chart(data["Close"])
 if event_data:
