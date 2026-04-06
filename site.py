@@ -14,8 +14,9 @@ data = data.dropna()
 #st.line_chart(btc["Close"])
 events={"Growth":[],
         "Drop":[{"date":"2022-12-01","title":"Ms sells btc","description":"promised not to sell it but sold it","window":20},
-                {"date":"2020-03-01","title":"Covid-19","description":"global pandemic","window":30}]}
-                            #{"date":"20-11-09","title":"FTX Collapse","withdrawals around the world":"ms promised not to sell etc, but they did"}]}
+                {"date":"2020-03-01","title":"Covid-19","description":"global pandemic","window":30}
+                {"date":"2018-01-01","title":"Bear market","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":365}]}
+#{"date":"20-11-09","title":"FTX Collapse","withdrawals around the world":"ms promised not to sell etc, but they did"}]}
 eventlist=events[mode]
 if eventlist:
     eventtitle=[e["title"] for e in eventlist]
