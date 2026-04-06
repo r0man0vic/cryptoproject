@@ -37,7 +37,7 @@ if not data.empty:
     st.line_chart(data["Close"])
 if event_data:
     st.subheader(event_data["title"])
-    st.caption(event_data["date"])
+    #st.caption(event_data["date"])
     st.write(event_data["description"])
 else:
     st.warning("No data available")
