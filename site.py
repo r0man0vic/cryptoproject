@@ -12,7 +12,7 @@ data = yf.download(coin, period=period, progress=False)
 data = data.dropna()
 #btc = yf.download("BTC-USD", period="6mo", progress=False)
 #st.line_chart(btc["Close"])
-events={"Growth":[{"date":"2020-12-10","title":"digital gold","description":"Terra collapsed","window":90}],
+events={"Growth":[{"date":"2020-12-10","title":"digital gold","description":"gazz","window":90}],
         "Drop":[
                 {"date":"2020-03-10","title":"Covid-19 crypto crisis","description":"global pandemic","window":30},
                 {"date":"2018-04-16","title":"Bear market in 2017","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":120},
