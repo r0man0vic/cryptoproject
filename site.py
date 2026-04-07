@@ -17,8 +17,8 @@ events={"Growth":[
                   {"date":"2020-12-10","title":"digital gold","description":"gazz","window":90},
                   {"date":"2021-10-1","title":"2021","description":"gazz","window":150},
                   {"date":"2024-01-20","title":"2024","description":"gazz","window":150},
-                  {"date":"2024-11-20","title":"2024v2","description":"gazz","window":150},
-                  {"date":"2025-06-1","title":"2025","description":"gazz","window":120}],
+                  {"date":"2024-11-15","title":"2024v2","description":"gazz","window":45},
+                  {"date":"2025-06-1","title":"2025","description":"gazz","window":75}],
         "Drop":[
                 {"date":"2018-04-16","title":"Bear market in 2017","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":120},
                 {"date":"2020-02-20","title":"Covid-19 crypto crisis","description":"global pandemic","window":30},
