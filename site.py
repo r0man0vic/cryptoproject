@@ -13,7 +13,7 @@ data = data.dropna()
 #btc = yf.download("BTC-USD", period="6mo", progress=False)
 #st.line_chart(btc["Close"])
 events={"Growth":[
-                  {"date":"2017-09-26","title":"2017","description":"gazz","window":81},
+                  {"date":"2017-09-26","title":"2017","description":"gazz","window":81,"image":"pics/тоша.jpg"},
                   {"date":"2020-11-20","title":"digital gold","description":"gazz","window":90},
                   {"date":"2021-9-13","title":"2021","description":"gazz","window":55},
                   {"date":"2023-12-15","title":"2024","description":"gazz","window":90},
@@ -51,6 +51,8 @@ if event_data:
     st.subheader(event_data["title"])
  
     st.write(event_data["description"])
+if "image" in event_data:
+    st.image(event_data["image"],use_container_width=True)
 
 
 
