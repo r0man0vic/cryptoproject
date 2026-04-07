@@ -27,7 +27,7 @@ events={"Growth":[
                 {"date":"2022-05-8","title":"Terra crash","description":"Terra collapsed","window":40},
                 #{"date":"2025-02-15","title":"Trump's tariffs","description":"1 feb -1march 2025Trump's announcement on new tarriffs","window":55},
                 {"date":"2026-03-6","title":"world tension","description":"4 oct 2025- 22nov 2025","window":150},
-                {"date":"2026-02-4","title":"Possible gov shutdown","description":"uncertanty","window":22}]}
+                {"date":"2026-01-25","title":"Possible gov shutdown","description":"uncertanty","window":11}]}
 #{"date":"20-11-09","title":"FTX Collapse","withdrawals around the world":"ms promised not to sell etc, but they did"}]}
 eventlist=events[mode]
 if eventlist:
