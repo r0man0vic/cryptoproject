@@ -51,7 +51,7 @@ if event_data:
     st.subheader(event_data["title"])
  
     st.write(event_data["description"])
-if "image" in event_data:
+if event_data and "image" in event_data:
     st.image(event_data["image"],use_container_width=True)
 
 
