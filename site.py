@@ -50,10 +50,10 @@ if not data.empty:
 if event_data:
     st.subheader(event_data["title"])
  
-    st.write(event_data["description"])
+    
 if event_data and "image" in event_data:
     st.image(event_data["image"],use_container_width=True)
-
+st.write(event_data["description"])
 
 
 #st.write("1.0v")
