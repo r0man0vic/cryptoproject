@@ -43,17 +43,17 @@ if st.button("Jump to time") and event_data:
     end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")
     data=yf.download(coin,start=start,end=end,progress=False)
     data=data.dropna()
-else:
-    event_data=None
+
 if not data.empty:
     st.line_chart(data["Close"])
+
 if event_data:
     st.subheader(event_data["title"])
- 
-    
-if event_data and "image" in event_data:
-    st.image(event_data["image"],use_container_width=True)
-st.write(event_data["description"])
+
+    if event_data and "image" in event_data:
+        st.image(event_data["image"],use_container_width=True)
+
+    st.write(event_data["description"])
 
 
 #st.write("1.3")
