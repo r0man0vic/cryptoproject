@@ -7,9 +7,9 @@ st.set_page_config(page_title="Crypto",layout="wide")
 st.title("Crypto Drop/Growth")
 mode = st.radio("Choose growth or drop of crypto currency", ["Growth","Drop"], horizontal=True)
 coin="BTC-USD"
-period = st.selectbox("Choose period",["1mo", "3mo", "6mo", "1y", "2y", "5y", "max"],index=2)
-data = yf.download(coin, period=period, progress=False)
-data = data.dropna()
+#period = st.selectbox("Choose period",["1mo", "3mo", "6mo", "1y", "2y", "5y", "max"],index=2)
+#data = yf.download(coin, period=period, progress=False)
+#data = data.dropna()
 #btc = yf.download("BTC-USD", period="6mo", progress=False)
 #st.line_chart(btc["Close"])
 events={"Growth":[
@@ -34,9 +34,16 @@ if eventlist:
     eventtitle=[e["title"] for e in eventlist]
     exactevent=st.selectbox("Select event",eventtitle)
     event_data=next(e for e in eventlist if e["title"]==exactevent)
+if event_data:
+    center=pd.to_datetime(event_data["date"])
+    window=event_data.get("window",15)
+    start=(center-pd.Timedelta(days=window)).strftime("%Y-%m-%d")
+    end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")
+    data=yf.download(coin,start=start,end=end,progress=False)
+    data=data.dropna()
 #button
 jump_days=1
-
+'''
 if st.button("Jump to time") and event_data:
     center=pd.to_datetime(event_data["date"])
     window=event_data.get("window",15)
@@ -44,7 +51,7 @@ if st.button("Jump to time") and event_data:
     end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")
     data=yf.download(coin,start=start,end=end,progress=False)
     data=data.dropna()
-
+'''
 if not data.empty:
     st.line_chart(data["Close"])
 
