@@ -43,15 +43,15 @@ if event_data:
     data=data.dropna()
 #button
 jump_days=1
-'''
-if st.button("Jump to time") and event_data:
-    center=pd.to_datetime(event_data["date"])
-    window=event_data.get("window",15)
-    start=(center-pd.Timedelta(days=window)).strftime("%Y-%m-%d")
-    end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")
-    data=yf.download(coin,start=start,end=end,progress=False)
-    data=data.dropna()
-'''
+
+#if st.button("Jump to time") and event_data:
+#    center=pd.to_datetime(event_data["date"])
+#    window=event_data.get("window",15)
+   # start=(center-pd.Timedelta(days=window)).strftime("%Y-%m-%d")
+ #   end=(center+pd.Timedelta(days=window)).strftime("%Y-%m-%d")
+  #  data=yf.download(coin,start=start,end=end,progress=False)
+  #  data=data.dropna()
+
 if not data.empty:
     st.line_chart(data["Close"])
 
