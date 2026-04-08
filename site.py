@@ -2,10 +2,10 @@ import streamlit as st
 import yfinance as yf
 import pandas as pd
 st.set_page_config(page_title="Crypto Risks", layout="wide")
-st.title("Crypto Risks")
+st.title("Factors of Growth or Crash Causes of Bitcoin")
 st.set_page_config(page_title="Crypto",layout="wide")
-st.title("Crypto Drop/Growth")
-mode = st.radio("Choose growth or drop of crypto currency", ["Growth","Drop"], horizontal=True)
+st.title("Project by Mikhail")
+mode = st.radio("Choose Event type, either ones, that affected Growth of Crash of BTC", ["Growth","Crash"], horizontal=True)
 coin="BTC-USD"
 #period = st.selectbox("Choose period",["1mo", "3mo", "6mo", "1y", "2y", "5y", "max"],index=2)
 #data = yf.download(coin, period=period, progress=False)
@@ -19,7 +19,7 @@ events={"Growth":[
                   {"date":"2023-12-15","title":"2024","description":"gazz","window":90,"image":"pics/2024.jpg"},
                   {"date":"2024-11-1","title":"2024v2","description":"gazz","window":45,"image":"pics/2024v2.jpg"},
                   {"date":"2025-05-31","title":"2025","description":"gazz","window":52,"image":"pics/2025.jpg"}],
-        "Drop":[
+        "Crash":[
                 {"date":"2018-04-16","title":"Bear market in 2017","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":120,"image":"pics/bear.jpg"},
                 {"date":"2020-02-18","title":"Covid-19 crypto crisis","description":"global pandemic","window":29,"image":"pics/covid.jpg"},
                 {"date":"2021-05-19","title":"China mining ban + Elon Musk tweets ","description":"China’s mining crackdown and macro uncertainty triggered a sharp correction after a historic bull run. Elon Musk's tweets regarding energy concerns","window":36,"image":"pics/china.jpg"},
