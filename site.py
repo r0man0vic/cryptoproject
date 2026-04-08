@@ -25,7 +25,7 @@ events={"Growth":[
                 {"date":"2021-05-19","title":"China mining ban + Elon Musk tweets ","description":"China’s mining crackdown and macro uncertainty triggered a sharp correction after a historic bull run. Elon Musk's tweets regarding energy concerns","window":36},
                 {"date":"2021-12-18","title":"Federal Reserve tightening","description":"Bitcoin declined as the Federal Reserve signaled tighter monetary policy, reducing liquidity and pushing investors away from risk assets.","window":35},
                 {"date":"2022-05-8","title":"Terra crash","description":"Terra collapsed","window":40},
-                {"date":"2025-03-1","title":"2025","description":"Terra collapsed","window":35},
+                {"date":"2025-02-16","title":"2025","description":"Terra collapsed","window":22},
                 {"date":"2026-01-25","title":"Possible gov shutdown","description":"uncertanty","window":11},
                 {"date":"2026-03-6","title":"world tension","description":"4 oct 2025- 22nov 2025","window":150},
                 ]}
