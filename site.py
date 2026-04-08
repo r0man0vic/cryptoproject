@@ -22,7 +22,7 @@ events={"Growth":[
         "Drop":[
                 {"date":"2018-04-16","title":"Bear market in 2017","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":120},
                 {"date":"2020-02-18","title":"Covid-19 crypto crisis","description":"global pandemic","window":29},
-                {"date":"2021-05-15","title":"China mining ban + Elon Musk tweets ","description":"China’s mining crackdown and macro uncertainty triggered a sharp correction after a historic bull run. Elon Musk's tweets regarding energy concerns","window":50},
+                {"date":"2021-05-19","title":"China mining ban + Elon Musk tweets ","description":"China’s mining crackdown and macro uncertainty triggered a sharp correction after a historic bull run. Elon Musk's tweets regarding energy concerns","window":36},
                 {"date":"2021-12-18","title":"Federal Reserve tightening","description":"Bitcoin declined as the Federal Reserve signaled tighter monetary policy, reducing liquidity and pushing investors away from risk assets.","window":35},
                 {"date":"2022-05-8","title":"Terra crash","description":"Terra collapsed","window":40},
                 {"date":"2026-01-25","title":"Possible gov shutdown","description":"uncertanty","window":11},
