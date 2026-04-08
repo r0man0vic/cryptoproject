@@ -1,11 +1,11 @@
 import streamlit as st
 import yfinance as yf
 import pandas as pd
-st.set_page_config(page_title="Crypto Risks", layout="wide")
+st.set_page_config(page_title="Events of ", layout="wide")
 st.title("Crypto Risks")
 st.set_page_config(page_title="Crypto",layout="wide")
 st.title("Crypto Drop/Growth")
-mode = st.radio("Choose growth or drop of crypto currency", ["Growth","Drop"], horizontal=True)
+mode = st.radio("Choose Type of Event Either Growth of BTC or Crash", ["Growth","Crash"], horizontal=True)
 coin="BTC-USD"
 #period = st.selectbox("Choose period",["1mo", "3mo", "6mo", "1y", "2y", "5y", "max"],index=2)
 #data = yf.download(coin, period=period, progress=False)
