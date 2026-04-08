@@ -2,9 +2,12 @@ import streamlit as st
 import yfinance as yf
 import pandas as pd
 st.set_page_config(page_title="Crypto Risks", layout="wide")
-st.title("Factors of Growth or Crash Causes of Bitcoin")
+st.title("Bitcoin Currency Growth and Crash Drivers")
 st.set_page_config(page_title="Crypto",layout="wide")
 st.title("Project by Mikhail")
+'''
+The application includes two types of events: “Growth” and “Crash”. Users can select an event to explore what happened during that period and see its impact on the all-time Bitcoin price chart.
+'''
 mode = st.radio("Choose Event type, either ones, that affected Growth of Crash of BTC", ["Growth","Crash"], horizontal=True)
 coin="BTC-USD"
 #period = st.selectbox("Choose period",["1mo", "3mo", "6mo", "1y", "2y", "5y", "max"],index=2)
