@@ -13,12 +13,12 @@ data = data.dropna()
 #btc = yf.download("BTC-USD", period="6mo", progress=False)
 #st.line_chart(btc["Close"])
 events={"Growth":[
-                  {"date":"2017-09-26","title":"2017","description":"gazz","window":81,"image":"pics/тоша.jpg"},
-                  {"date":"2020-12-20","title":"digital gold","description":"gazz","window":90},
-                  {"date":"2021-9-13","title":"2021","description":"gazz","window":55},
-                  {"date":"2023-12-15","title":"2024","description":"gazz","window":90},
-                  {"date":"2024-11-1","title":"2024v2","description":"gazz","window":45},
-                  {"date":"2025-05-31","title":"2025","description":"gazz","window":52}],
+                  {"date":"2017-09-26","title":"2017","description":"gazz","window":81,"image":"pics/2017.jpg"},
+                  {"date":"2020-12-20","title":"digital gold","description":"gazz","window":90,"image":"pics/gold.jpg"},
+                  {"date":"2021-9-13","title":"2021","description":"gazz","window":55,"image":"pics/2021.jpg"},
+                  {"date":"2023-12-15","title":"2024","description":"gazz","window":90,"image":"pics/2024.jpg"},
+                  {"date":"2024-11-1","title":"2024v2","description":"gazz","window":45,"image":"pics/2024v2.jpg"},
+                  {"date":"2025-05-31","title":"2025","description":"gazz","window":52,"image":"pics/2025.jpg"}],
         "Drop":[
                 {"date":"2018-04-16","title":"Bear market in 2017","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":120},
                 {"date":"2020-02-18","title":"Covid-19 crypto crisis","description":"global pandemic","window":29},
