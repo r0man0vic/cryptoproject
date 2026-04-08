@@ -20,14 +20,14 @@ events={"Growth":[
                   {"date":"2024-11-1","title":"2024v2","description":"gazz","window":45,"image":"pics/2024v2.jpg"},
                   {"date":"2025-05-31","title":"2025","description":"gazz","window":52,"image":"pics/2025.jpg"}],
         "Drop":[
-                {"date":"2018-04-16","title":"Bear market in 2017","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":120},
-                {"date":"2020-02-18","title":"Covid-19 crypto crisis","description":"global pandemic","window":29},
-                {"date":"2021-05-19","title":"China mining ban + Elon Musk tweets ","description":"China’s mining crackdown and macro uncertainty triggered a sharp correction after a historic bull run. Elon Musk's tweets regarding energy concerns","window":36},
-                {"date":"2021-12-18","title":"Federal Reserve tightening","description":"Bitcoin declined as the Federal Reserve signaled tighter monetary policy, reducing liquidity and pushing investors away from risk assets.","window":35},
-                {"date":"2022-05-8","title":"Terra crash","description":"Terra collapsed","window":40},
-                {"date":"2025-02-16","title":"2025","description":"Terra collapsed","window":22},
-                {"date":"2026-01-25","title":"Possible gov shutdown","description":"uncertanty","window":11},
-                {"date":"2026-03-6","title":"world tension","description":"4 oct 2025- 22nov 2025","window":150},
+                {"date":"2018-04-16","title":"Bear market in 2017","description":"The 2017 bull run created massive speculation. When the bubble popped, the entire crypto market entered a deep bear cycle.","window":120,"image":"pics/bear.jpg"},
+                {"date":"2020-02-18","title":"Covid-19 crypto crisis","description":"global pandemic","window":29,"image":"pics/covid.jpg"},
+                {"date":"2021-05-19","title":"China mining ban + Elon Musk tweets ","description":"China’s mining crackdown and macro uncertainty triggered a sharp correction after a historic bull run. Elon Musk's tweets regarding energy concerns","window":36,"image":"pics/china.jpg"},
+                {"date":"2021-12-18","title":"Federal Reserve tightening","description":"Bitcoin declined as the Federal Reserve signaled tighter monetary policy, reducing liquidity and pushing investors away from risk assets.","window":35,"image":"pics/federal.jpg"},
+                {"date":"2022-05-8","title":"Terra crash","description":"Terra collapsed","window":40,"image":"pics/terra.jpg"},
+                {"date":"2025-02-16","title":"2025","description":"Terra collapsed","window":22,"image":"pics/new.jpg"},
+                {"date":"2026-01-25","title":"Possible gov shutdown","description":"uncertanty","window":11,"image":"pics/possible.jpg"},
+                {"date":"2026-03-6","title":"world tension","description":"4 oct 2025- 22nov 2025","window":150,"image":"pics/final.jpg"},
                 ]}
 eventlist=events[mode]
 if eventlist:
