@@ -1,11 +1,11 @@
 import streamlit as st
 import yfinance as yf
 import pandas as pd
-st.set_page_config(page_title="Events of ", layout="wide")
+st.set_page_config(page_title="Crypto Risks", layout="wide")
 st.title("Crypto Risks")
 st.set_page_config(page_title="Crypto",layout="wide")
 st.title("Crypto Drop/Growth")
-mode = st.radio("Choose Type of Event Either Growth of BTC or Crash", ["Growth","Crash"], horizontal=True)
+mode = st.radio("Choose growth or drop of crypto currency", ["Growth","Drop"], horizontal=True)
 coin="BTC-USD"
 #period = st.selectbox("Choose period",["1mo", "3mo", "6mo", "1y", "2y", "5y", "max"],index=2)
 #data = yf.download(coin, period=period, progress=False)
@@ -29,10 +29,7 @@ events={"Growth":[
                 {"date":"2026-01-25","title":"Possible gov shutdown","description":"uncertanty","window":11,"image":"pics/possible.jpg"},
                 {"date":"2026-03-6","title":"world tension","description":"4 oct 2025- 22nov 2025","window":150,"image":"pics/final.jpg"},
                 ]}
-st.write("mode:",mode)
-st.write("keys:",events.keys())
-
-eventlist=events.get(mode,[])
+eventlist=events[mode]
 if eventlist:
     eventtitle=[e["title"] for e in eventlist]
     exactevent=st.selectbox("Select event",eventtitle)
@@ -67,4 +64,4 @@ if event_data:
     st.write(event_data["description"])
 
 
-#st.write("222")
+#st.write("22")
