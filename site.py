@@ -29,7 +29,10 @@ events={"Growth":[
                 {"date":"2026-01-25","title":"Possible gov shutdown","description":"uncertanty","window":11,"image":"pics/possible.jpg"},
                 {"date":"2026-03-6","title":"world tension","description":"4 oct 2025- 22nov 2025","window":150,"image":"pics/final.jpg"},
                 ]}
-eventlist=events[mode]
+st.write("mode:",mode)
+st.write("keys:",events.keys())
+
+eventlist=events.get(mode,[])
 if eventlist:
     eventtitle=[e["title"] for e in eventlist]
     exactevent=st.selectbox("Select event",eventtitle)
