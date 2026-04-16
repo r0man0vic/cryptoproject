@@ -6,7 +6,7 @@ st.title("Bitcoin Currency Growth and Crash Drivers")
 st.set_page_config(page_title="Crypto",layout="wide")
 st.title("Project by Mikhail")
 '''
-The application includes two types of events: “Growth” and “Crash”. Users can select an event to explore what happened during that period and see its impact on the all-time Bitcoin price chart.
+The application includes two types of events: “Growth” and “Crash”. Users can explore each event to understand what happened during that period and analyze how different factors influence Bitcoin’s price movements through both event-specific and all-time graphs, helping them develop a deeper understanding of the crypto market and improve their ability to interpret market behavior.
 '''
 mode = st.radio("Choose Event type, either ones, that affected Growth of Crash of BTC", ["Growth","Crash"], horizontal=True)
 coin="BTC-USD"
